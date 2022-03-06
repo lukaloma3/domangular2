@@ -1,0 +1,57 @@
+.card{
+    position: relative;
+    img{
+object-fit: cover; 
+height: 300px;
+    }
+.smallimg{
+     height: 75px !important;
+
+}
+
+}
+
+.gift{
+position: absolute;
+z-index: 5;
+background-color: red;
+border-radius: 7px;
+padding: 5px;
+left: 10px;
+top: 10px;
+width: fit-content;
+
+
+
+}
+
+.active{
+    border: 2px solid black;
+}
+
+
+.aside{
+position: absolute;
+width: 400px;
+height: 100%;
+background-color: aqua;
+top: 0;
+left: -100%;
+z-index: 34;
+max-width: 100%;
+transition: all 1s;
+}
+
+.asideclick{
+padding: 7px;
+border-radius: 10px;
+background-color: red;
+position: absolute;
+z-index: 4323;
+left: 20px;
+top: 20px;
+cursor: pointer;
+}
+.active{left: 0;
+    
+}

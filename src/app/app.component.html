@@ -1,0 +1,40 @@
+<div class="aside bg-primary" [ngClass]="{'active': show}"></div>
+<div class="asideclick" (click)="aside()">asidebar</div>
+<div class="container mt-5">
+
+<div class="row">
+<div class="col-lg-4" *ngFor="let product of products index as in">
+    <div class="card" >
+        <img [src]="product.imgactive" class="card-img-top" alt="...">
+        <div class="gift" *ngIf="product.gift"><h3><i class="bi bi-gift"></i> საჩუქარი</h3></div>
+        <div class="card-body">
+            <div class="row">
+            <div class="col-lg-4" *ngFor="let photo of product.img ">
+            <img [src]="photo" alt="" class="card-img smallimg" (click)="imgsrc(photo, in )"> 
+            </div>
+          
+        <div class="col-lg-4" *ngFor="let wei of product.weight index as i">
+            <div class="weight p-2 bg-danger text-center mb-2 mt-2" [ngClass]="{active: product.activeweight[i]}"(click)="pw(wei, product.price, product.discount, in, i )">{{wei}} კგ</div>
+        </div>
+<div class="price p-2 bg-primary text-center mb-2">ფასი : {{product.price}} ლ - 1კგ</div>
+<div class="disprice p-2 bg-primary text-center mb-2">ფასდაკლება : {{product.discount}} %</div>
+              <div class="price p-2 bg-primary text-center mb-2">სულ ფასი:{{product.fp}} </div>
+              <div class="disprice p-2 bg-primary text-center mb-2"> ფასი ფასდაკლებით:{{product.disfp}} </div>
+        </div>
+              
+          
+        </div>
+      </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div></div>
